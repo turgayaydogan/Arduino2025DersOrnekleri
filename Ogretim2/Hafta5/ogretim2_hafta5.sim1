@@ -1,0 +1,53 @@
+<circuit version="1.1.0-SR1" rev="2005" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-200,-216" rotation="0" hflip="1" vflip="1" label="Uno-1" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Logic_Symbol="false">
+<mainCompProps MainCompId="mega328-109" Frequency="16 MHz" Program="../../../Belgelerim/Arduino/Arduino_2025/Ogretim2/Hafta5/dht11_1/build/arduino.avr.uno/dht11_1.ino.with_bootloader.hex" Auto_Load="false" saveEepr="true" MainMcu="true" SerialMon="1" />
+</item>
+
+<item itemtype="LDR" CircId="LDR-2" mainComp="false" Show_id="false" Show_Val="false" Pos="44,-192" rotation="90" hflip="1" vflip="1" label="LDR-2" idLabPos="-16,-24" labelrot="0" valLabPos="-16,30" valLabRot="0" Lux="875 Lux" Min_Lux="0 Lux" Max_Lux="1000 Lux" Dial_Step="0 Lux" Gamma="0.8582" R1="127410 Ω" Slider="false" Scale="1" />
+
+<item itemtype="Rail" CircId="Rail-3" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="44,-248" rotation="90" hflip="1" vflip="1" label="Rail-3" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="5 V" />
+
+<item itemtype="Ground" CircId="Ground-4" mainComp="false" Show_id="false" Show_Val="false" Pos="44,-88" rotation="0" hflip="1" vflip="1" label="Ground-4" idLabPos="-16,8" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Resistor" CircId="Resistor-5" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="44,-136" rotation="-90" hflip="1" vflip="1" label="Resistor-5" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 kΩ" />
+
+<item itemtype="SR04" CircId="SR04-7" mainComp="false" Show_id="false" Show_Val="false" Pos="-304,-220" rotation="0" hflip="1" vflip="1" label="SR04-7" idLabPos="-16,-48" labelrot="0" valLabPos="-16,20" valLabRot="0" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-8" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-424,-220" rotation="0" hflip="1" vflip="1" label="Voltage Source-8" idLabPos="-32,-48" labelrot="0" valLabPos="-8,30" valLabRot="0" Running="true" Value_Volt="2.5 V" MaxValue="5 V" MinValue="0 V" />
+
+<item itemtype="Dht22" CircId="Dht22-9" mainComp="false" Show_id="false" Show_Val="false" Pos="-292,-68" rotation="0" hflip="1" vflip="1" label="Dht22-9" idLabPos="-28,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" DHT22="DHT11" TempInc="0.5 °C" HumiInc="5 _%" />
+
+<item itemtype="Resistor" CircId="Resistor-10" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-372,-72" rotation="0" hflip="1" vflip="1" label="Resistor-10" idLabPos="-16,-24" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="10 kΩ" />
+
+<item itemtype="Rail" CircId="Rail-11" mainComp="false" ShowProp="Voltage" Show_id="false" Show_Val="true" Pos="-416,-96" rotation="90" hflip="1" vflip="1" label="Rail-11" idLabPos="-5,-10" labelrot="-90" valLabPos="-12,6" valLabRot="-90" Voltage="5 V" />
+
+<item itemtype="Node" CircId="Node-6" mainComp="false" Pos="44,-160" />
+
+<item itemtype="Node" CircId="Node-12" mainComp="false" Pos="-340,-72" />
+
+<item itemtype="Connector" uid="Connector-1" startpinid="Rail-3-outnod" endpinid="LDR-2-lPin" pointList="44,-232,44,-208" />
+
+<item itemtype="Connector" uid="Connector-3" startpinid="Resistor-5-lPin" endpinid="Ground-4-Gnd" pointList="44,-120,44,-104" />
+
+<item itemtype="Connector" uid="Connector-4" startpinid="Uno-1-A0" endpinid="Node-6-1" pointList="-48,-160,44,-160" />
+
+<item itemtype="Connector" uid="Connector-5" startpinid="LDR-2-rPin" endpinid="Node-6-0" pointList="44,-176,44,-160" />
+
+<item itemtype="Connector" uid="Connector-6" startpinid="Node-6-2" endpinid="Resistor-5-rPin" pointList="44,-160,44,-152" />
+
+<item itemtype="Connector" uid="Connector-7" startpinid="SR04-7-outpin" endpinid="Uno-1-6" pointList="-296,-172,-296,-152,-192,-152" />
+
+<item itemtype="Connector" uid="Connector-8" startpinid="SR04-7-trigpin" endpinid="Uno-1-7" pointList="-304,-172,-304,-144,-192,-144" />
+
+<item itemtype="Connector" uid="Connector-9" startpinid="Voltage Source-8-outPin" endpinid="SR04-7-inpin" pointList="-396,-204,-396,-244,-392,-244" />
+
+<item itemtype="Connector" uid="Connector-10" startpinid="Rail-11-outnod" endpinid="Resistor-10-lPin" pointList="-416,-80,-416,-72,-388,-72" />
+
+<item itemtype="Connector" uid="Connector-12" startpinid="Node-12-1" endpinid="Uno-1-8" pointList="-340,-72,-340,-128,-192,-128" />
+
+<item itemtype="Connector" uid="Connector-13" startpinid="Resistor-10-rPin" endpinid="Node-12-0" pointList="-356,-72,-340,-72" />
+
+<item itemtype="Connector" uid="Connector-14" startpinid="Node-12-2" endpinid="Dht22-9-inPin" pointList="-340,-72,-328,-72" />
+
+</circuit>
